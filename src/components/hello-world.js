@@ -15,8 +15,8 @@ export default class Hello {
         {
           name: 'Pokèmon',
           location: {
-            // lat: <your-latitude>,
-            // lng: <your-longitude>,
+            lat: 55.649042,
+            lng: 12.554516,
           },
         },
       ];
