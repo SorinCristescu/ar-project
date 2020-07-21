@@ -10,7 +10,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "css-loader": "^3.6.0",
+    "style-loader": "^1.2.1",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
+    "@babel/plugin-transform-arrow-functions": "^7.10.4",
+    "@babel/preset-env": "^7.10.4"
   }
 }
