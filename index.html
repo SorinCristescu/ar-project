@@ -5,6 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AR Project</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src='https://aframe.io/releases/0.9.2/aframe.min.js'></script>
+    <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+    <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+    <script>
+        THREEx.ArToolkitContext.baseURL = 'https://raw.githack.com/jeromeetienne/ar.js/master/three.js/'
+    </script>
 </head>
 
 <style>
@@ -17,14 +24,68 @@
     .none {
         display: none;
     }
+
+    .hello {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .centered {
+        height: 20%;
+        justify-content: center;
+        position: fixed;
+        bottom: 0%;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin: 0px auto;
+        left: 0;
+        right: 0;
+    }
+
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid white;
+        background-color: transparent;
+        width: 2em;
+        height: 2em;
+        border-radius: 100%;
+        font-size: 2em;
+        background-color: rgba(0, 0, 0, 0.4);
+        color: white;
+        outline: none;
+    }
+
+    .instructions {
+        position: fixed;
+        top: 5%;
+        font-size: 1.25em;
+        color: white;
+        z-index: 999999;
+    }
 </style>
 
 <body>
-    <h1>AR Project</h1>
+    <div class="hello">
+        <div class="centered instructions">
+            <a-scene vr-mode-ui="enabled: false" embedded
+                arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
+                <a-camera gps-camera rotation-reader>
+                </a-camera>
+            </a-scene>
+        </div>
+        <div class="centered">
+            <button data-action="change"></button>
+        </div>
+    </div>
 
-    <div class="hello"></div>
-    <button class="show-box">Show box</button>
-    <div class="box"></div>
+
+    <!-- <button class="show-box">Show box</button>
+    <div class="box"></div> -->
+
+
     <script src="dist/bundle.js"></script>
 </body>
 
