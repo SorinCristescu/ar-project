@@ -69,13 +69,11 @@
 
 <body>
     <div class="hello">
-        <div class="centered instructions">
-            <a-scene vr-mode-ui="enabled: false" embedded
-                arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
-                <a-camera gps-camera rotation-reader>
-                </a-camera>
-            </a-scene>
-        </div>
+        <div class="centered instructions"></div>
+        <a-scene vr-mode-ui='enabled: false' embedded
+            arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
+            <a-camera gps-camera rotation-reader></a-camera>
+        </a-scene>
         <div class="centered">
             <button data-action="change"></button>
         </div>
