@@ -4,7 +4,7 @@ export default class Hello {
 
     window.onload = () => {
       const button = document.querySelector('button[data-action="change"]');
-      button.innerText = '﹖';
+      button.innerText = 'NEXT';
 
       let places = staticLoadPlaces();
       renderPlaces(places);
@@ -13,10 +13,10 @@ export default class Hello {
     function staticLoadPlaces() {
       return [
         {
-          name: 'Pokèmon',
+          name: 'Augmented Reality',
           location: {
-            lat: 55.649042,
-            lng: 12.554516,
+            lat: 55.649142,
+            lng: 12.554941,
           },
         },
       ];
