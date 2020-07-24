@@ -24,31 +24,31 @@ export default class Hello {
 
     var models = [
       {
-        url: './assets/3DObjects/magnemite/scene.gltf',
+        url: '../assets/3DObjects/magnemite/scene.gltf',
         scale: '0.5 0.5 0.5',
         info: 'Magnemite',
         rotation: '0 180 0',
       },
       {
-        url: './assets/nissan/scene.gltf',
+        url: '../assets/3DObjects/nissan/scene.gltf',
         scale: '0.2 0.2 0.2',
         rotation: '0 180 0',
         info: 'Nissan GTRs Max',
       },
       {
-        url: './assets/spinosaurus/scene.gltf',
+        url: '../assets/3DObjects/spinosaurus/scene.gltf',
         scale: '0.08 0.08 0.08',
         rotation: '0 180 0',
         info: 'Spinosaurus',
       },
       {
-        url: './assets/velociraptor/scene.gltf',
+        url: '../assets/3DObjects/velociraptor/scene.gltf',
         scale: '0.08 0.08 0.08',
         rotation: '0 180 0',
         info: 'Velociraptor',
       },
       {
-        url: './assets/warrior/scene.gltf',
+        url: '../assets/3DObjects/warrior/scene.gltf',
         scale: '0.08 0.08 0.08',
         rotation: '0 180 0',
         info: 'Warrior',
@@ -91,7 +91,7 @@ export default class Hello {
         setModel(models[modelIndex], model);
 
         model.setAttribute('animation-mixer', '');
-
+        console.log('model', model);
         document
           .querySelector('button[data-action="change"]')
           .addEventListener('click', function () {
